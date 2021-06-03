@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'decodencode';
+    decode:string = '';
+    encode:string = '';
+    fdecode(){
+      this.encode = decodeURI(this.decode)
+    }
+    fencode(){
+      this.decode = encodeURI(this.encode)
+    }
 }
